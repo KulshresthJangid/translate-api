@@ -2,7 +2,7 @@ const { query } = require("express")
 const express = require("express")
 const db = require('mysql')
 const app = express()
-const api = require('translate-google')
+
 
 const connection = require('./db/mysql')
 

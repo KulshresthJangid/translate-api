@@ -1,3 +1,6 @@
+const connection = require('../db/mysql')
+const api = require('translate-google')
+
 //Helper functions
 //Fn to store translation in the database
 const storeTranslation = (text, source, target, result)=>{

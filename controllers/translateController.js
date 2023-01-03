@@ -3,13 +3,9 @@ const {
   handleTranslationRequest,
 } = require("../helpers/helper");
 const { langs, isSupported, getCode } = require("../helpers/languages");
-const {
-  smartPreCaching,
-  handleTranslationRequest,
-} = require("../helpers/helper");
 
 exports.translate = async (req, res) => {
-  const { text, source, target } = req.body;
+  let { text, source, target } = req.body;
   if (isSupported(source) && isSupported(target)) {
     source = getCode(source)
     target = getCode(target)
